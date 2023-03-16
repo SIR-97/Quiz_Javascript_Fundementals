@@ -37,10 +37,42 @@ var questions = [
 },
 ];
 
+
+
 // Function to start the quiz
 startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   // Hide start screen and show questions screen
   document.getElementById("start-screen").classList.add("hide");
   document.getElementById("questions").classList.remove("hide");
+
+  // Show first question
+showQuestion();
+
 }
+
+var questionIndex = 0;
+
+// Function to show a question
+function showQuestion() {
+  // Get current question
+  var question = questions[questionIndex];
+
+  // Set question title
+  questionTitleEl.textContent = question.title;
+
+  // Clear choices
+  choicesEl.innerHTML = "";
+
+  // Add choices
+  for (var i = 0; i < question.choices.length; i++) {
+    var choice = question.choices[i];
+    var button = document.createElement("button");
+    button.textContent = choice;
+    button.setAttribute("data-answer", choice);
+    button.addEventListener("click", checkAnswer);
+    choicesEl.appendChild(button);
+  }
+    // Show feedback
+    feedbackEl.classList.remove("hide");
+  }
