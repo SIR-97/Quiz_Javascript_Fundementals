@@ -37,6 +37,11 @@ var questions = [
 },
 ];
 
+// Set up global variables
+var questionIndex = 0;
+var secondsLeft = 60;
+var timerInterval;
+
 
 
 // Function to start the quiz
@@ -46,12 +51,13 @@ function startQuiz() {
   document.getElementById("start-screen").classList.add("hide");
   document.getElementById("questions").classList.remove("hide");
 
+   // Start timer
+   startTimer();
+
   // Show first question
 showQuestion();
 
 }
-
-var questionIndex = 0;
 
 // Function to show a question
 function showQuestion() {
@@ -90,6 +96,7 @@ function checkAnswer(event) {
   } else {
     // Show incorrect feedback and subtract time
     feedbackEl.textContent = "Incorrect!";
+    secondsLeft -= 10;
   
   }
 
@@ -100,4 +107,35 @@ function checkAnswer(event) {
   } else {
     endQuiz();
   }
+}
+
+// Function to end the quiz
+function endQuiz() {
+  // Stop timer
+  clearInterval(timerInterval);
+
+  // Show end screen and hide questions screen
+  document.getElementById("questions").classList.add("hide");
+  document.getElementById("end-screen").classList.remove("hide");
+
+  // Show final score
+  finalScoreEl.textContent = secondsLeft;
+}
+
+// Function to start the timer
+function startTimer() {
+  // Set initial time
+  timeEl.textContent = secondsLeft;
+
+  // Set up timer interval
+  timerInterval = setInterval(function() {
+    // Update time left
+    secondsLeft--;
+    timeEl.textContent = secondsLeft;
+
+    // End quiz if time runs out
+    if (secondsLeft <= 0) {
+      endQuiz();
+    }
+  }, 1000);
 }
