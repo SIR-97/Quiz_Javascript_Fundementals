@@ -76,3 +76,28 @@ function showQuestion() {
     // Show feedback
     feedbackEl.classList.remove("hide");
   }
+
+  // Function to check answer
+function checkAnswer(event) {
+  // Get selected answer and correct answer
+  var selectedAnswer = event.target.getAttribute("data-answer");
+  var correctAnswer = questions[questionIndex].answer;
+
+  // Check if answer is correct
+  if (selectedAnswer === correctAnswer) {
+    // Show correct feedback
+    feedbackEl.textContent = "Correct!";
+  } else {
+    // Show incorrect feedback and subtract time
+    feedbackEl.textContent = "Incorrect!";
+  
+  }
+
+  // Move to next question or end quiz
+  if (questionIndex < questions.length - 1) {
+    questionIndex++;
+    showQuestion();
+  } else {
+    endQuiz();
+  }
+}
