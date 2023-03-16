@@ -42,8 +42,6 @@ var questionIndex = 0;
 var secondsLeft = 60;
 var timerInterval;
 
-
-
 // Function to start the quiz
 startButton.addEventListener("click", startQuiz);
 function startQuiz() {
@@ -138,4 +136,23 @@ function startTimer() {
       endQuiz();
     }
   }, 1000);
-}
+
+  document.getElementById("submit").addEventListener("click", saveScore);
+
+  function saveScore(event) {
+  event.preventDefault();
+  
+  var initials = document.getElementById("initials").value;
+  var score = document.getElementById("final-score").innerText;
+  
+  var newScore = {
+    initials: initials,
+    score: score
+  };
+  
+  var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  highScores.push(newScore);
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+  
+  window.location.href = "highscores.html";
+}};
