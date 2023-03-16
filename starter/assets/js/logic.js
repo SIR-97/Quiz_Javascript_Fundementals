@@ -37,3 +37,10 @@ var questions = [
 },
 ];
 
+// Function to start the quiz
+startButton.addEventListener("click", startQuiz);
+function startQuiz() {
+  // Hide start screen and show questions screen
+  document.getElementById("start-screen").classList.add("hide");
+  document.getElementById("questions").classList.remove("hide");
+}
