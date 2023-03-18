@@ -1,4 +1,4 @@
-#Quiz_Javascript_Fundementals
+# Quiz_Javascript_Fundementals
 
 For this challenge I utilised skills learnt for JavaScript, in order to create a timed quiz that stores high scores which can be stored and my progress compared to my peers.
 
