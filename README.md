@@ -1,88 +1,22 @@
-# Module 6 Challenge Web APIs: Code Quiz
+For this challenge I utilised skills learnt for JavaScript, in order to create a timed quiz that stores high scores which can be stored and my progress compared to my peers.
 
-## Your Task
+My application works as follows:
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
-
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
- 
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-Create a code quiz that contains the following requirements:
-
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
-
-* The quiz should end when all questions are answered or the timer reaches 0.
-
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+- The quiz begins when the user clicks on the start button.
+- The timer begins to count down at the start of the quiz.
+- When the user answers the question, they are told if the answer is correct or incorrect before being presented with another question.
+- For every incorrect question 10 seconds is subtracted from the timer.
+- The game is over when all questions are answered or the timer reaches 0.
+- When the game is over, the user can input their initials to save the score the highscore section.
+- The user can remove the information (initials) from the highscore page by clicking the clear button.
 
 
-## Review
+Link to deployed my application: 
 
-You are required to submit BOTH of the following for review:
+![_C__Users_Lenovo_bootcamp-challenges_Quiz_Javascript_Fundementals_starter_index html](https://user-images.githubusercontent.com/119041506/226101363-43f22d1f-dee0-44e1-9a71-2e774609d0e2.png)
 
-* The URL of the functional, deployed application.
+![_C__Users_Lenovo_bootcamp-challenges_Quiz_Javascript_Fundementals_starter_index html (1)](https://user-images.githubusercontent.com/119041506/226101373-4fd20909-c4f3-4796-b511-932cb5a727e4.png)
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+![_C__Users_Lenovo_bootcamp-challenges_Quiz_Javascript_Fundementals_starter_index html (3)](https://user-images.githubusercontent.com/119041506/226101419-b1416729-bff2-474e-90d9-cbc88505d350.png)
 
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+![_C__Users_Lenovo_bootcamp-challenges_Quiz_Javascript_Fundementals_starter_highscores html](https://user-images.githubusercontent.com/119041506/226101436-20ce3b89-a148-497c-8730-33bc53616958.png)
