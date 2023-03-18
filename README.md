@@ -11,7 +11,7 @@ My application works as follows:
 - The user can remove the information (initials) from the highscore page by clicking the clear button.
 
 
-Link to deployed my application: 
+Link to deployed my application: https://sir-97.github.io/Quiz_Javascript_Fundementals/ 
 
 ![_C__Users_Lenovo_bootcamp-challenges_Quiz_Javascript_Fundementals_starter_index html](https://user-images.githubusercontent.com/119041506/226101363-43f22d1f-dee0-44e1-9a71-2e774609d0e2.png)
 
